@@ -1,0 +1,19 @@
+todo alfa:
+-http support for cddb over http (libcddb)
+-sanity checks na laden plugins en config
+-check for memleaks
+
+todo beta (must be feature complete):
+-config gui
+-cdplay support
+-basic error handling (dialogs)
+-nakijken waarom na rippen/encoden 2 threads draaien ipv 1 (ergens een
+ clone() syscall?)
+-check for memleaks
+
+todo final:
+-polish
+-full error handling
+-check for memleaks
+-uitzoeken vanaf welke versie lame zijn eigen tags kan maken, en ev. dat
+gebruiken ipv eigen id3tag() functie

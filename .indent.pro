@@ -1,0 +1,1 @@
+-bad -bap -bbb -br -brs -cdw -ce -ci4 -i4 -cli4 -nut -saf -sai -saw -npsl -npcs -nprs -ss -nbc -lps -lp -nsob -l100

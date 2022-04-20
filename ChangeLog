@@ -1,0 +1,710 @@
+2002-11-06 23:02  joske
+
+	* src/: plugins/cdparanoia.c, plugins/gogo.c, plugins/lame.c,
+	plugins/oggenc.c, ripper_plugin.h, plugin_handling.c,
+	plugin_handling.h: basic error handling, don't crash if no plugin
+	found
+
+2002-11-06 22:44  joske
+
+	* TODO: rework TODO for alfa and beta
+
+2002-11-06 18:17  joske
+
+	* src/lib/: rx_pixmap.c, rx_pixmap.h: added pixmap utils
+
+2002-11-06 18:16  joske
+
+	* src/: callbacks.c, callbacks.h, interface.c, interface.h,
+	support.c, support.h: removed obsolete files
+
+2002-11-06 17:51  joske
+
+	* aclocal.m4, ltmain.sh, src/main.c, src/rx_main.c,
+	src/lib/Makefile.am, src/lib/rx_util.c, src/lib/rx_util.h: move
+	pixmap stuff into own file and link in the util .so
+
+2002-11-06 08:37  airborne
+
+	* src/lib/rx_util.c: correct track number in track file names
+
+2002-11-06 02:29  joske
+
+	* src/lib/.cvsignore: add .cvsignore
+
+2002-11-06 02:26  joske
+
+	* src/config_handler.c: add keepWav option, it is needed ;-)
+
+2002-11-06 02:12  joske
+
+	* src/plugin_handling.c: simplify
+
+2002-11-06 02:05  joske
+
+	* src/: config_defines.h, config_handler.c, plugin_handling.c:
+	remove old cruft add plugin dir config option
+
+2002-11-06 02:03  joske
+
+	* src/lib/: rx_util.c, rx_util.h: put pixmap stuff from
+	support.[ch] here
+
+2002-11-06 02:02  joske
+
+	* src/: Makefile.am, main.c, progress_gui.c, track_view.c: remove
+	old glade cruft
+
+2002-11-05 21:44  airborne
+
+	* src/: job.c, progress_gui.h, rx_progress.c: revamped progress
+	calculation/dialog
+
+2002-11-05 18:01  joske
+
+	* src/Makefile.am: add new header
+
+2002-11-05 17:57  joske
+
+	* src/plugins/: cdparanoia.c, gogo.c, lame.c, oggenc.c: split off
+	the config defines to silence warning in the plugins
+
+2002-11-05 17:02  joske
+
+	* src/: config_defines.h, config_handler.h: split off the config
+	defines to silence warning in the plugins
+
+2002-11-04 22:58  airborne
+
+	* src/: job.c, plugins/cdparanoia.c: track numbering issue
+
+2002-11-04 22:05  airborne
+
+	* src/track_view.c: model index does not start at 1
+
+2002-11-04 21:44  airborne
+
+	* src/: job.c, track_view.c, track_view.h: Re-include track
+	selection code
+
+2002-11-04 21:40  airborne
+
+	* src/lib/rx_util.c: Track number in file names should start at 1
+
+2002-11-03 11:31  airborne
+
+	* src/cddb.c: only prompt user if more than one match found
+
+2002-11-03 11:29  airborne
+
+	* src/plugins/cdparanoia.c: missing include file
+
+2002-11-02 21:29  airborne
+
+	* src/: job.c, plugins/cdparanoia.c, plugins/gogo.c,
+	plugins/lame.c, plugins/oggenc.c: free memory allocated by
+	get_source/dest_file()
+
+2002-11-02 17:52  airborne
+
+	* src/cddb.c: Added support CDDB multiple matches.
+
+2002-11-02 16:49  airborne
+
+	* src/plugin_handling.c: One should not submit personal code into
+	the repository.
+
+2002-11-02 02:50  joske
+
+	* src/lib/: rx_util.c, rx_util.h: add locate_exe function (kris
+	will hate me for it)
+
+2002-11-02 02:46  joske
+
+	* src/plugin_handling.c: only use plugins that can find their exe's
+
+2002-11-02 02:45  joske
+
+	* src/plugins/: cdparanoia.c, gogo.c, lame.c, oggenc.c: only return
+	a rx_cfg* when we can find our exe
+
+2002-11-02 01:58  airborne
+
+	* src/misc_util.c: no need for -1 when calling	g_snprintf
+
+2002-11-02 01:37  airborne
+
+	* src/: cddb.c, main.c, track_view.c, plugins/cdparanoia.c: libcddb
+	integration (part 2)
+
+2002-11-01 23:39  airborne
+
+	* src/lib/: rx_util.c, rx_util.h: Initial revision
+
+2002-11-01 23:39  airborne
+
+	* src/: cddb.c, cddb.h, id3.c, id3.h, job.c, main.c, main.h,
+	misc_util.c, plugin_handling.c, plugin_handling.h, ripper_plugin.h,
+	ripperx.h, track_view.c, plugins/cdparanoia.c, plugins/gogo.c,
+	plugins/lame.c, plugins/oggenc.c: libcddb integration (part 1)
+
+2002-11-01 23:38  airborne
+
+	* aclocal.m4, config.h.in, configure.in, ltmain.sh,
+	src/lib/Makefile.am: [no log message]
+
+2002-08-05 23:30  airborne
+
+	* src/: cddb_select_cd.c, cddb_select_cd.h, id3_genre.c,
+	id3_genre.h: Initial revision
+
+2002-08-05 23:29  airborne
+
+	* src/ripperx.h: Changed genre type to id3_genre.
+
+2002-08-05 23:28  airborne
+
+	* src/id3.h: Changed type of genre variable to id3_genre.
+
+2002-08-05 23:27  airborne
+
+	* src/cddb.c: Added genre support to CDDB query.
+
+2002-08-05 23:24  airborne
+
+	* src/Makefile.am: Added id3_genre.[hc] and cddb_select_cd.[hc]
+
+2002-04-04 22:36  airborne
+
+	* src/: config_handler.c, config_handler.h, main.c: The main
+	configuration is now kept by the config_handler itself, not by the
+	main program.  If no .ripperXrc.xml file is present a startup, one
+	will be created automatically at shutdown.
+
+2002-04-04 22:34  airborne
+
+	* src/plugin_handling.c: Let plugin initialize its configuration
+	when RipperX starts.
+
+2002-03-24 16:24  airborne
+
+	* src/: config_handler.c, config_handler.h, main.c, lib/rx_cfg.c:
+	Added writing of config on exit of RipperX.
+
+2002-03-23 23:48  joske
+
+	* ChangeLog: [no log message]
+
+2002-03-23 23:48  joske
+
+	* TODO: add cdplay to TODO list
+
+2002-03-23 23:37  joske
+
+	* ChangeLog: [no log message]
+
+2002-03-23 23:24  joske
+
+	* README, TODO: add README and TODO
+
+2002-03-23 23:10  joske
+
+	* src/progress_gui.c: destroy progress dialog after use
+
+2002-03-23 23:09  joske
+
+	* src/track_view.c: remove obsolete method
+
+2002-03-23 23:08  joske
+
+	* src/track_view.c: [no log message]
+
+2002-03-23 23:08  joske
+
+	* src/: rx_track_view.c, rx_track_view.h: add g_object_ref(),
+	gtk_object_sink() to constructor for refcounting (fixes segfault)
+	add select_all button to trackview various cleanups and
+	synchronization
+
+2002-03-23 23:06  joske
+
+	* src/rx_progress.c: add g_object_ref(), gtk_object_sink() to
+	constructor for refcounting
+
+2002-03-23 23:05  joske
+
+	* src/: rx_main.c, rx_main.h: remove select_all, change toolbar to
+	hbox (looks better)
+
+2002-03-23 23:04  joske
+
+	* src/: plugin_handling.c, plugin_handling.h, ripper_plugin.h,
+	plugins/cdparanoia.c: return error code on unsuccessful scan
+
+2002-03-23 23:02  joske
+
+	* src/: main.c, main.h: move select_all button to rx_trackview
+
+2002-03-23 02:10  joske
+
+	* src/plugins/: cdparanoia.c, gogo.c, lame.c, oggenc.c: make
+	source/dest filename generic
+
+2002-03-23 02:09  joske
+
+	* src/: rx_main.c, rx_main.h: change signature of constructor
+
+2002-03-23 02:08  joske
+
+	* src/ripperx.h: add comment
+
+2002-03-23 02:08  joske
+
+	* src/main.c: set rip/encode radio according to config
+
+2002-03-23 02:07  joske
+
+	* src/job.c: add support for source/destination file names (needs
+	template)
+
+2002-03-23 02:06  joske
+
+	* src/config_handler.h: add keepWav option
+
+2002-03-22 18:52  joske
+
+	* src/: id3.c, id3.h: stubs for id3 tagging
+
+2002-03-22 18:50  joske
+
+	* src/plugins/: gogo.c, lame.c: change CFG_GOGO_PATH to
+	CFG_PLUGIN_PATH
+
+2002-03-22 18:49  joske
+
+	* src/plugins/cdparanoia.c: add rint() to calculate correct discid
+
+2002-03-22 18:48  joske
+
+	* src/plugins/oggenc.c: basic ogg plugin
+
+2002-03-22 18:48  joske
+
+	* src/plugins/Makefile.am: add oggenc.c
+
+2002-03-22 18:47  joske
+
+	* src/ripper_plugin.h: add #define for plugin configs
+
+2002-03-22 18:47  joske
+
+	* src/plugin_handling.c: add include
+
+2002-03-22 18:46  joske
+
+	* src/main.c: set the ripper/encoder based on config
+
+2002-03-22 18:44  joske
+
+	* src/: config_handler.c, config_handler.h: add more config options
+
+2002-03-22 18:43  joske
+
+	* src/cddb.c: add http support
+
+2002-03-22 18:40  joske
+
+	* src/Makefile.am: add id3.[ch]
+
+2002-03-22 15:04  joske
+
+	* src/: cddb.c, cddb.h, config_handler.c, config_handler.h,
+	ripperx.h: add support for cddb lookup over http
+
+2002-03-22 08:02  airborne
+
+	* src/lib/: rx_cfg.c, rx_cfg.h: New method to get the names of all
+	configuration items.  Some settings for getting items as strings.
+
+2002-03-21 19:54  airborne
+
+	* src/lib/rx_cfg.c: Fixed problem with getting parent.	Some cast
+	to avoid compiler warnings.  Added a method to retrieve any cfg
+	item as a string.
+
+2002-03-21 18:40  joske
+
+	* src/progress_gui.c: add gtk_grab to make dialog modal (doesn't
+	seem to work though...)
+
+2002-03-21 18:39  joske
+
+	* src/plugins/lame.c: change default path to /usr/bin
+
+2002-03-21 18:38  joske
+
+	* src/lib/rx_cfg.c: fix compilation warning by adding cast
+
+2002-03-21 18:37  joske
+
+	* src/track_view.c: call main_set_track_view after init. some
+	interface changes
+
+2002-03-21 18:36  joske
+
+	* src/rx_track_view.c: fix race condition by blocking signal
+	handler
+
+2002-03-21 18:35  joske
+
+	* src/rx_progress.c: fix some compilation warnings
+
+2002-03-21 18:34  joske
+
+	* src/: plugin_handling.c, plugin_handling.h: interface changes (no
+	more global vars)
+
+2002-03-21 18:33  joske
+
+	* src/: main.c, main.h: remove global vars, add g_thread_init()
+
+2002-03-21 18:31  joske
+
+	* src/: config_handler.c, config_handler.h: remove all config gui
+	stuff for now (waiting on kris)
+
+2002-03-21 18:30  joske
+
+	* src/: cddb.c, cddb.h, job.c, job.h: interface changes (no more
+	global vars)
+
+2002-03-21 18:29  joske
+
+	* src/: callbacks.c, callbacks.h, interface.c: move main window
+	stuff to rx_main.[ch]
+
+2002-03-21 18:28  joske
+
+	* src/Makefile.am: add new files to src list
+
+2002-03-21 18:28  joske
+
+	* configure.in: add gobject and gthread dependancies
+
+2002-03-21 18:27  joske
+
+	* src/: rx_main.c, rx_main.h: make main window a custom widget
+
+2002-03-20 18:07  joske
+
+	* src/: rx_track_view.c, rx_track_view.h: block signal handler
+	while syncing track view
+
+2002-03-19 21:03  airborne
+
+	* src/config_handler.c: Removed some duplicated code by using
+	general_plugin.
+
+2002-03-19 20:56  airborne
+
+	* src/: callbacks.c, config_handler.c, plugin_handling.c,
+	plugin_handling.h, ripper_plugin.h, lib/rx_cfg.c, lib/rx_cfg.h,
+	plugins/cdparanoia.c, plugins/gogo.c, plugins/lame.c: Free
+	configuration when RipperX termimates.
+
+2002-03-19 19:11  joske
+
+	* src/cddb.c: off by one segfault fixed
+
+2002-03-19 18:57  joske
+
+	* aclocal.m4, config.h.in, src/callbacks.c, src/cddb.c, src/cddb.h,
+	src/config_handler.c, src/config_handler.h, src/interface.c,
+	src/interface.h, src/job.c, src/main.c, src/main.h,
+	src/misc_util.c, src/misc_util.h, src/progress_gui.c,
+	src/progress_gui.h, src/ripperx.h, src/rx_progress.c,
+	src/rx_progress.h, src/rx_track_view.h: make progress dialog a
+	custom widget, preliminary support for cddb
+
+2002-03-19 18:55  joske
+
+	* src/Makefile.am: add cddb.[ch] and rx_progress.[ch]
+
+2002-03-19 00:08  airborne
+
+	* src/: Makefile.am, plugins/Makefile.am: Solved issue with .libs
+	dir when using libtool 1.4 (won't work with 1.3 probably)
+
+2002-03-18 23:51  joske
+
+	* src/lib/: rx_cfg.c, rx_cfg.h: port to ugly val.strVal
+
+2002-03-18 21:15  airborne
+
+	* src/: plugin_handling.c, plugin_handling.h: New config code. 
+	Made plugin hashtables extern instead of static so they can also be
+	used in config_handler.
+
+2002-03-18 21:14  airborne
+
+	* src/ripperx.h: Moved dlog() macro to debug.h
+
+2002-03-18 21:14  airborne
+
+	* src/interface.c: Port to gtk2
+
+2002-03-18 21:13  airborne
+
+	* doc/doxygen.conf: Also produce documentation from *.c files.
+
+2002-03-18 21:13  airborne
+
+	* configure.in: Port to libxml2, glib2, gtk2
+
+2002-03-18 21:12  airborne
+
+	* src/: Makefile.am, plugins/Makefile.am: Clean up, new config
+	code, port to glib2, libxml2, gtk2
+
+2002-03-18 21:11  airborne
+
+	* src/: callbacks.c, config_handler.c, config_handler.h, job.c,
+	main.h, ripper_plugin.h, track_view.c, plugins/cdparanoia.c,
+	plugins/gogo.c, plugins/lame.c: New configuration code integration.
+
+2002-03-18 21:09  airborne
+
+	* src/lib/Makefile.am: AutoMake template
+
+2002-03-18 21:08  airborne
+
+	* src/lib/: rx_cfg.c, rx_cfg.h: Configuration API.
+
+2002-03-18 21:04  airborne
+
+	* src/debug.h: Debugging macros
+
+2002-03-10 17:56  airborne
+
+	* doc/doxygen.conf: Doxygen configuration file.
+
+2002-03-09 00:19  joske
+
+	* ripperX.glade, strings.tbl, src/callbacks.c, src/callbacks.h,
+	src/interface.c, src/job.c, src/job.h, src/rx_track_view.c,
+	src/rx_track_view.h, src/track_view.c, src/track_view.h: fix
+	threading issue with progress gui destructor for rx_track_view
+
+2002-03-07 01:43  joske
+
+	* src/config_handler.c: add encode config option
+
+2002-03-07 01:38  joske
+
+	* src/: rx_track_view.c, track_view.c: fix typos
+
+2002-03-07 01:34  joske
+
+	* src/: ripperx.h, rx_track_view.c, rx_track_view.h, track_view.c,
+	track_view.h, plugins/cdparanoia.c: trackview works - string
+	handling changed
+
+2002-03-06 22:17  joske
+
+	* acconfig.h, config.h.in, configure.in, src/ripperx.h: add
+	--enable-debug
+
+2002-03-06 21:52  joske
+
+	* src/ripperx.h: moved debug macros in the #ifndef ;-)
+
+2002-03-06 20:39  airborne
+
+	* src/ripperx.h: Added debugging macro (just use like printf).
+
+2002-03-06 00:00  joske
+
+	* src/: callbacks.c, rx_track_view.c, track_view.c, track_view.h:
+	some cleanup of track_view components
+
+2002-03-05 23:16  joske
+
+	* ripperX.glade, strings.tbl, src/interface.c, src/rx_track_view.c,
+	src/rx_track_view.h, src/track_view.c: rx_track_view.[ch] basic
+	functionality
+
+2002-03-04 23:29  joske
+
+	* AUTHORS: added Kris as AUTHOR
+
+2002-03-04 23:23  joske
+
+	* src/Makefile.am: add rx_track_view.[ch]
+
+2002-03-04 23:23  joske
+
+	* src/: rx_track_view.c, rx_track_view.h: add custum widget for the
+	trackview
+
+2002-02-28 00:37  joske
+
+	* config.h.in, src/config_handler.c, src/ripperx.h: load config
+	from xml file
+
+2002-02-26 23:55  joske
+
+	* configure.in: add check for libxml
+
+2002-02-26 23:43  joske
+
+	* src/: ripper_plugin.h, plugins/cdparanoia.c: work on config gui
+	and backend
+
+2002-02-26 23:03  joske
+
+	* ripperX.glade, strings.tbl, src/callbacks.c,
+	src/config_handler.c, src/config_handler.h, src/interface.c,
+	src/plugin_handling.c, src/plugin_handling.h, src/ripper_plugin.h,
+	src/ripperx.h, src/plugins/cdparanoia.c, src/plugins/gogo.c,
+	src/plugins/lame.c: make plugins selectable through config GUI
+
+2002-02-26 00:56  joske
+
+	* ripperX.glade, strings.tbl, src/interface.c, src/job.c,
+	src/progress_gui.c, src/progress_gui.h: add completed and remaining
+	tracks to progress dialog
+
+2002-02-26 00:34  joske
+
+	* ripperX.glade, strings.tbl, src/callbacks.c, src/callbacks.h,
+	src/config_handler.c, src/interface.c, src/job.c, src/track_view.c,
+	src/track_view.h: work on track view, almost done
+
+2002-02-25 21:53  joske
+
+	* ripperX.glade: some changes to progress_dialog
+
+2002-02-25 21:51  joske
+
+	* src/: interface.c, job.c, misc_util.c, misc_util.h,
+	progress_gui.c, progress_gui.h, track_view.c, plugins/cdparanoia.c,
+	plugins/gogo.c, plugins/lame.c: progress gui work
+
+2002-02-25 20:01  joske
+
+	* src/job.c: remove list elements after they are handled to free
+	memory
+
+2002-02-24 23:42  joske
+
+	* src/: plugin_handling.c, plugins/cdparanoia.c, plugins/gogo.c,
+	plugins/lame.c: make all local variables static
+
+2002-02-24 23:39  joske
+
+	* src/job.c: make local vars static
+
+2002-02-24 23:36  joske
+
+	* src/job.c: optimize the wait loop in do_encode
+
+2002-02-24 23:19  joske
+
+	* .cvsignore, src/.cvsignore, src/plugins/.cvsignore: update
+	.cvsignore
+
+2002-02-24 23:14  joske
+
+	* pixmaps/.cvsignore, src/.cvsignore, src/plugins/.cvsignore: added
+	.cvsignore to all dirs
+
+2002-02-24 23:11  joske
+
+	* src/: job.c, job.h: added job control
+
+2002-02-24 23:09  joske
+
+	* .cvsignore, config.h.in, configure.in, ripperX.glade,
+	strings.tbl, src/Makefile.am, src/callbacks.c,
+	src/config_handler.c, src/config_handler.h, src/interface.c,
+	src/interface.h, src/main.c, src/main.h, src/plugin_handling.c,
+	src/plugin_handling.h, src/progress_gui.c, src/progress_gui.h,
+	src/ripper_plugin.h, src/ripperx.h, src/plugins/cdparanoia.c,
+	src/plugins/gogo.c, src/plugins/lame.c: added job control added
+	progress gui
+
+2002-02-24 16:51  joske
+
+	* src/plugins/: gogo.c, lame.c: added progress variable
+
+2002-02-24 16:45  joske
+
+	* src/callbacks.h: removed obsolete prototyes
+
+2002-02-24 16:44  joske
+
+	* ripperX.glade, src/callbacks.c, src/callbacks.h, src/interface.c,
+	src/plugin_handling.c, src/ripperx.h, src/plugins/cdparanoia.c,
+	src/plugins/gogo.c, src/plugins/lame.c: made cdparanoia, gogo and
+	lame plugins basically work.
+
+2002-02-24 15:03  joske
+
+	* pixmaps/Makefile.in: Removed pixmaps/Makefile.in
+
+2002-02-24 15:01  joske
+
+	* Makefile.in, src/Makefile.in, src/plugins/Makefile.in: removed
+	Makefile.in from source control (autogenerated anyway)
+
+2002-02-24 14:52  joske
+
+	* src/plugins/: Makefile.am, Makefile.in, lame.c: added lame.c
+
+2002-02-24 14:31  joske
+
+	* .tm_project.cache, RipperX.prj, RipperX.pws: Removing anjuta
+	project files from repository
+
+2002-02-24 14:24  joske
+
+	* ripperX-3.0.tar.gz, ripperx.glade: removed unneeded files
+
+2002-02-24 14:18  joske
+
+	* .tm_project.cache, Makefile.am, NEWS, README, RipperX.prj, TODO,
+	acconfig.h, autogen.sh, configure.in, ripperX.glade, AUTHORS,
+	ChangeLog, stamp-h.in, Makefile.in, aclocal.m4, config.h.in,
+	ripperx.glade, strings.tbl, config.guess, config.sub, ltmain.sh,
+	RipperX.pws, ripperX-3.0.tar.gz, src/interface.h, src/main.c,
+	src/misc_util.c, src/support.c, src/support.h, src/Makefile.am,
+	src/Makefile.in, src/callbacks.c, src/callbacks.h,
+	src/config_handler.c, src/config_handler.h, src/interface.c,
+	src/main.h, src/misc_util.h, src/plugin_handling.c,
+	src/plugin_handling.h, src/ripper_plugin.h, src/ripperx.h,
+	src/track_view.c, src/track_view.h, src/plugins/Makefile.am,
+	src/plugins/cdparanoia.c, pixmaps/cddb.xpm, pixmaps/exit.xpm,
+	pixmaps/go.xpm, pixmaps/scan.xpm, pixmaps/stop.xpm,
+	src/plugins/Makefile.in, src/plugins/gogo.c, pixmaps/Makefile.am,
+	pixmaps/Makefile.in, pixmaps/config.xpm, pixmaps/ripperX.xpm:
+	Initial revision
+
+2002-02-24 14:18  joske
+
+	* .tm_project.cache, Makefile.am, NEWS, README, RipperX.prj, TODO,
+	acconfig.h, autogen.sh, configure.in, ripperX.glade, AUTHORS,
+	ChangeLog, stamp-h.in, Makefile.in, aclocal.m4, config.h.in,
+	ripperx.glade, strings.tbl, config.guess, config.sub, ltmain.sh,
+	RipperX.pws, ripperX-3.0.tar.gz, src/interface.h, src/main.c,
+	src/misc_util.c, src/support.c, src/support.h, src/Makefile.am,
+	src/Makefile.in, src/callbacks.c, src/callbacks.h,
+	src/config_handler.c, src/config_handler.h, src/interface.c,
+	src/main.h, src/misc_util.h, src/plugin_handling.c,
+	src/plugin_handling.h, src/ripper_plugin.h, src/ripperx.h,
+	src/track_view.c, src/track_view.h, src/plugins/Makefile.am,
+	src/plugins/cdparanoia.c, pixmaps/cddb.xpm, pixmaps/exit.xpm,
+	pixmaps/go.xpm, pixmaps/scan.xpm, pixmaps/stop.xpm,
+	src/plugins/Makefile.in, src/plugins/gogo.c, pixmaps/Makefile.am,
+	pixmaps/Makefile.in, pixmaps/config.xpm, pixmaps/ripperX.xpm:
+	RipperX 3.0
+

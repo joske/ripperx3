@@ -1,0 +1,31 @@
+#ifndef CONFIG_DEFINES_H
+#define CONFIG_DEFINES_H 1
+
+#define CFG_MAIN_SRC_PATH           "sourcePath"
+#define CFG_MAIN_ENC_PATH           "encodedPath"
+#define CFG_MAIN_CDDB_PATH          "cddbPath"
+#define CFG_MAIN_XLT_SPC            "convertSpaces"
+#define CFG_MAIN_BIT_RATE           "bitrate"
+#define CFG_MAIN_DIR_ALBUM          "albumDirs"
+#define CFG_MAIN_ENABLED_RIP        "ripper"
+#define CFG_MAIN_ENABLED_ENC        "encoder"
+#define CFG_MAIN_RIP_RATIO          "rip_ratio"
+#define CFG_MAIN_RIPPER             "ripper"
+#define CFG_MAIN_ENC_RATIO          "enc_ratio"
+#define CFG_MAIN_ENCODER            "encoder"
+#define CFG_MAIN_ENCODE             "encode"
+#define CFG_MAIN_KEEP_WAV           "keepWav"
+#define CFG_MAIN_CDDB_SERVER        "cddbServer"
+#define CFG_MAIN_CDDB_URL           "cddbURL"
+#define CFG_MAIN_CDDB_URL_SUBMIT    "cddbURLSubmit"
+#define CFG_MAIN_CDDB_PORT          "cddbPort"
+#define CFG_MAIN_CDDB_USE_HTTP      "cddbUseHttp"
+#define CFG_MAIN_CDDB_USE_PROXY     "cddbUseProxy"
+#define CFG_MAIN_CDDB_PROXY         "cddbProxy"
+#define CFG_MAIN_CDDB_PROXY_PORT    "cddbProxyPort"
+#define CFG_MAIN_PLUGIN_DIR         "pluginDir"
+#define CFG_MAIN_CREATE_TAG         "createTag"
+#define CFG_MAIN_DIR_TEMPLATE       "dirTemplate"
+#define CFG_MAIN_FILE_TEMPLATE      "fileTemplate"
+
+#endif /* CONFIG_DEFINES_H */

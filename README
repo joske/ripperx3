@@ -1,0 +1,16 @@
+This is RipperX 3.x.
+
+You will need libcddb. You can get it from here: http://libcddb.sourceforge.net
+
+It is a total and utter rewrite from RipperX 2.x. No code at all was reused. The look and feel was reused, but has some minor tweaks in the gui. It is based on an OO design and all the components are MVC based.
+
+Design Goals:
+- keep as close to the original look and feel of 2.x as feasable
+- make the design flexible, but powerful (requirement was full OggVorbis support - this was not doable in 2.x without major kludging)
+- use GTK+/GLIB 2.0. This will be the standard very soon, no point in writing new code in 1.2.
+- use pthreads and don't fork/exec/dup. 
+- Use real plugins (based on shared libraries), the old code really sucked on this part. It was too difficult to understand, and even more so to maintain.
+- full CDDB support (also upload)
+- use XML-based config file
+- use libcddb for cddb support (thanks, Kris)
+
